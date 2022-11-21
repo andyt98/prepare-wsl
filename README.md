@@ -14,9 +14,18 @@ wsl --shutdown
 ssh-keygen
 cat .ssh/id_rsa.pub     # add this on github
 ```
-- Install git 
+- Install OpenSSH Server and open port 
+```
+sudo apt install openssh-server
+sudo systemctl enable ssh --now
+sudo ufw allow ssh
+ssh-copy-id andy@localhost
+```
+- Install git and clone the repo
 ```
 sudo apt install git
+git clone git@github.com:andyt98/prepare-wsl.git
+cd prepare-wsl
 ```
 - Install ansible
 ```
@@ -25,4 +34,3 @@ python3 -m venv venv
 source venv/bin/activate
 pip3 install ansible
 ```
-- Install OpenSSH Server and open port 
