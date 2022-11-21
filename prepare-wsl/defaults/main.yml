@@ -1,0 +1,24 @@
+---
+# defaults file for prepare-wsl
+common_packages:
+  - python3.10-venv
+  - ca-certificates
+  - curl
+  - apt-transport-https
+  - gnupg
+  - lsb-release
+  - openjdk-17-jre-headless
+  - software-properties-common
+  - bash-completion
+
+docker_packages:
+  - docker-ce
+  - docker-ce-cli
+  - containerd.io
+  - docker-compose-plugin
+
+minikube_pkg: https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+
+kubectl_pkg: kubectl
+
+terraform_pkg: terraform

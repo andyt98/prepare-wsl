@@ -24,12 +24,10 @@ ssh-copy-id user@localhost
 ```
 - Install ansible
 ```
-mkdir ansible
-cd ansible
-sudo apt install python3.10-venv -y
-python3 -m venv venv
-source venv/bin/activate
-pip3 install ansible
+sudo apt install python3-pip python3-apt -y 
+pip3 install ansible ansible-lint 
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
 ```
 - Install git and clone the repo
 ```
@@ -39,4 +37,7 @@ cd prepare-wsl
 git config --global user.email "you@example.com"
 git config --global user.name "you@example.com"
 ```
-
+- Run the playbook
+```
+ansible-playbook prepare-wsl.yml --ask-become-pass
+```
