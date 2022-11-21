@@ -21,6 +21,13 @@ sudo systemctl enable ssh --now
 sudo ufw allow ssh
 ssh-copy-id user@localhost
 ```
+- Install ansible
+```
+mkdir ansible
+python3 -m venv venv
+source venv/bin/activate
+pip3 install ansible
+```
 - Install git and clone the repo
 ```
 sudo apt install git
@@ -29,10 +36,4 @@ cd prepare-wsl
 git config --global user.email "you@example.com"
 git config --global user.name "you@example.com"
 ```
-- Install ansible
-```
-mkdir ansible
-python3 -m venv venv
-source venv/bin/activate
-pip3 install ansible
-```
+
