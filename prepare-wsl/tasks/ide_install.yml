@@ -1,0 +1,22 @@
+- name: Install IDEs
+  community.general.packaging.os.snap:
+    name:
+      - "{{ intellij_pkg }}"
+      - "{{ pycharm_pkg }}"
+    classic: true
+    state: present
+  become: true
+
+- name: Create symlink for Intellij Idea launcher
+  ansible.builtin.file:
+    src: /snap/{{ intellij_pkg }}/current/bin/idea.sh
+    dest: /usr/local/bin/idea
+    state: link
+  become: true
+
+- name: Create symlink for Pycharm launcher
+  ansible.builtin.file:
+    src: /snap/{{ pycharm_pkg }}/current/bin/pycharm.sh
+    dest: /usr/local/bin/pycharm
+    state: link
+  become: true

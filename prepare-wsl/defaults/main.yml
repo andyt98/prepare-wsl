@@ -10,6 +10,8 @@ common_packages:
   - openjdk-17-jre-headless
   - software-properties-common
   - bash-completion
+  - nautilus
+  - firefox
 
 docker_packages:
   - docker-ce
@@ -22,3 +24,6 @@ minikube_pkg: https://storage.googleapis.com/minikube/releases/latest/minikube_l
 kubectl_pkg: kubectl
 
 terraform_pkg: terraform
+
+intellij_pkg: intellij-idea-ultimate
+pycharm_pkg: pycharm-professional

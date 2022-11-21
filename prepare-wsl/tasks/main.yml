@@ -8,13 +8,16 @@
 - name: Install Docker
   ansible.builtin.include_tasks: docker_install.yml
 
-- name: Install Minikube
-  ansible.builtin.apt:
-    deb: "{{ minikube_pkg }}"
-    state: present
-
 - name: Install kubectl
   ansible.builtin.include_tasks: kubectl_install.yml
 
 - name: Install Terraform
   ansible.builtin.include_tasks: terraform_install.yml
+
+- name: Install Minikube
+  ansible.builtin.apt:
+    deb: "{{ minikube_pkg }}"
+    state: present
+
+- name: Install JetBrains IDEs
+  ansible.builtin.include_tasks: ide_install.yml
