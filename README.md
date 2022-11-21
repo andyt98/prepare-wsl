@@ -16,7 +16,8 @@ cat .ssh/id_rsa.pub     # add this on github
 ```
 - Install OpenSSH Server and open port 
 ```
-sudo apt install openssh-server
+sudo apt update && sudo apt upgrade -y
+sudo apt install openssh-server -y
 sudo systemctl enable ssh --now
 sudo ufw allow ssh
 ssh-copy-id user@localhost
@@ -24,6 +25,8 @@ ssh-copy-id user@localhost
 - Install ansible
 ```
 mkdir ansible
+cd ansible
+sudo apt install python3.10-venv -y
 python3 -m venv venv
 source venv/bin/activate
 pip3 install ansible
