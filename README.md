@@ -19,13 +19,15 @@ cat .ssh/id_rsa.pub     # add this on github
 sudo apt install openssh-server
 sudo systemctl enable ssh --now
 sudo ufw allow ssh
-ssh-copy-id andy@localhost
+ssh-copy-id user@localhost
 ```
 - Install git and clone the repo
 ```
 sudo apt install git
 git clone git@github.com:andyt98/prepare-wsl.git
 cd prepare-wsl
+git config --global user.email "you@example.com"
+git config --global user.name "you@example.com"
 ```
 - Install ansible
 ```
