@@ -33,7 +33,7 @@ pip3 install ansible
 ```
 - Install git and clone the repo
 ```
-sudo apt install git
+sudo apt install git -y
 git clone git@github.com:andyt98/prepare-wsl.git
 cd prepare-wsl
 git config --global user.email "you@example.com"
