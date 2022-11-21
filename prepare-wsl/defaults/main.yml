@@ -12,6 +12,7 @@ common_packages:
   - bash-completion
   - nautilus
   - firefox
+  - libxss1
 
 docker_packages:
   - docker-ce
