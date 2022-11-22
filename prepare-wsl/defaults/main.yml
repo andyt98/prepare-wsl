@@ -1,18 +1,19 @@
 ---
 # defaults file for prepare-wsl
 common_packages:
-  - python3.10-venv
   - ca-certificates
   - curl
   - apt-transport-https
   - gnupg
   - lsb-release
-  - openjdk-17-jre-headless
   - software-properties-common
   - bash-completion
+  - openjdk-17-jre-headless
+  - python3.10-venv
   - nautilus
   - firefox
   - libxss1
+  - shellcheck
 
 docker_packages:
   - docker-ce
