@@ -1,9 +1,12 @@
 # Ansible playbook to prepare WSL
 
 Prerequisites:
+- Don't ask for password when using sudo
+```
+sudo echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
+```
 - Add systemd flag on wsl.conf
 ```
-sudo echo '$USER ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
 echo -e "[boot] \nsystemd=true" | sudo tee -a /etc/wsl.conf
 ```
 - Reboot WSL from PowerShell to allow the change to be made 
