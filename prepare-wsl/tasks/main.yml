@@ -22,6 +22,7 @@
   ansible.builtin.apt:
     deb: "{{ minikube_pkg }}"
     state: present
+  become: true
   tags: minikube
 
 - name: Install JetBrains IDEs
