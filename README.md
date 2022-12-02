@@ -22,7 +22,7 @@ cat .ssh/id_rsa.pub
 ```
 sudo apt update && sudo apt upgrade -y && sudo apt install openssh-server -y
 sudo systemctl enable ssh --now && sudo ufw allow ssh
-ssh-copy-id user@localhost
+ssh-copy-id $USER@localhost
 ```
 - Install ansible
 ```
