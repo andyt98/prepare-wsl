@@ -3,7 +3,7 @@
 Prerequisites:
 - Don't ask for password when using sudo
 ```
-sudo echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
+echo "$USER ALL=(ALL) NOPASSWD:ALL" | sudo tee -a /etc/sudoers
 ```
 - Add systemd flag on wsl.conf
 ```
