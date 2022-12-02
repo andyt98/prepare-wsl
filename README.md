@@ -3,7 +3,8 @@
 Prerequisites:
 - Add systemd flag on wsl.conf
 ```
-echo -e "[boot] \nsystemd=true" | sudo tee /etc/wsl.conf
+sudo echo '$USER ALL=(ALL) NOPASSWD:ALL' | sudo tee -a /etc/sudoers
+echo -e "[boot] \nsystemd=true" | sudo tee -a /etc/wsl.conf
 ```
 - Reboot WSL from PowerShell to allow the change to be made 
 ```
@@ -12,14 +13,12 @@ wsl --shutdown
 - Generate ssh key pair and add the public key on your github account
 ```
 ssh-keygen
-cat .ssh/id_rsa.pub     # add this on github
+cat .ssh/id_rsa.pub
 ```
 - Install OpenSSH Server and open port 
 ```
-sudo apt update && sudo apt upgrade -y
-sudo apt install openssh-server -y
-sudo systemctl enable ssh --now
-sudo ufw allow ssh
+sudo apt update && sudo apt upgrade -y && sudo apt install openssh-server -y
+sudo systemctl enable ssh --now && sudo ufw allow ssh
 ssh-copy-id user@localhost
 ```
 - Install ansible
