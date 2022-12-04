@@ -6,3 +6,4 @@
   - name: Import role
     ansible.builtin.import_role:
       name: prepare-wsl-almalinux
+sudo systemctl start sshd

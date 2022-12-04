@@ -11,7 +11,7 @@ wsl --shutdown
 ```
 Install required packages
 ```
-sudo dnf update && sudo dnf upgrade -y && sudo dnf install -y vim openssh-server rhel-system-roles git
+sudo dnf update && sudo dnf upgrade -y && sudo dnf install -y vim git openssh-server rhel-system-roles 
 sudo systemctl enable ssh --now && sudo ufw allow ssh
 ```
 - Generate ssh key pair and add the public key on your github account
@@ -29,6 +29,10 @@ cd prepare-wsl
 - Install the required collection
 ```
 ansible-galaxy collection install community.general ansible.posix
+```
+- Enable SSH
+```
+sudo systemctl enable sshd --now
 ```
 - Run the playbook -> first time with --ask-pass --ask-become-pass flags
 ```

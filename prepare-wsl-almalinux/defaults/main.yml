@@ -7,6 +7,8 @@ ansible_collections:
 
 packages:
   - pip
+  - iputils
+  - iproute
 
 pip_packages:
   - ansible-lint
