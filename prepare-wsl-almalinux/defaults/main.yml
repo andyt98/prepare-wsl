@@ -1,0 +1,12 @@
+---
+# defaults file for prepare-wsl-almalinux
+
+ansible_collections:
+  - ansible.posix
+  - community.general
+
+packages:
+  - pip
+
+pip_packages:
+  - ansible-lint

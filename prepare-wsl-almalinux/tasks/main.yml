@@ -1,0 +1,17 @@
+---
+# tasks file for prepare-wsl-almalinux
+- name: Install Ansible Collections
+  ansible.builtin.include_tasks: collections_install.yml
+
+- name: Configure Connection
+  ansible.builtin.include_tasks: configure_connection.yml
+
+- name: Install required packages
+  ansible.builtin.package:
+    name: "{{ packages }}"
+    state: present
+  become: true
+
+- name: Install required pip packages
+  ansible.builtin.pip:
+    name: "{{ pip_packages }}"

@@ -22,11 +22,15 @@ cat .ssh/id_rsa.pub
 - Clone the repo
 ```
 git clone git@github.com:andyt98/prepare-wsl.git
-cd prepare-wsl
 git config --global user.email "you@example.com"
 git config --global user.name "you@example.com"
+cd prepare-wsl
 ```
-- Run the playbook
+- Install the required collection
 ```
-ansible-playbook prepare-wsl.yml --ask-become-pass
+ansible-galaxy collection install community.general ansible.posix
+```
+- Run the playbook -> first time with --ask-pass --ask-become-pass flags
+```
+ansible-playbook prepare-wsl-almalinux.yml --ask-pass --ask-become-pass
 ```

@@ -1,8 +1,8 @@
 ---
 - hosts: localhost
   gather_facts: true
-  name: Prepare Ubuntu WSL
+  name: Prepare AlmaLinux WSL
   tasks:
   - name: Import role
     ansible.builtin.import_role:
-      name: prepare-wsl
+      name: prepare-wsl-almalinux

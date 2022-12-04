@@ -1,0 +1,13 @@
+- name: Ensure key is in  ~/.ssh/authorized_hosts
+  ansible.posix.authorized_key:
+    user: "{{ ansible_facts.user_id }}"
+    state: present
+    key: "{{ lookup('file', '~/.ssh/id_rsa.pub') }}"
+
+- name: Enable the ansible user to use sudo to become root without a password
+  community.general.sudoers:
+    name: ansible-sudo
+    user: "{{ ansible_facts.user_id }}"
+    nopassword: true
+    commands: ALL
+  become: true
