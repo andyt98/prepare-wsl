@@ -24,7 +24,3 @@
     state: present
   become: true
   tags: minikube
-
-- name: Install JetBrains IDEs
-  ansible.builtin.include_tasks: ide_install.yml
-  tags: jetbrains
