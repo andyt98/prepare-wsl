@@ -5,9 +5,10 @@
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
-- Remove bloatware
+- Enable scripts on the system
 ```
-
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+```
 ```
 - Downlaod Google Chrome and Visual Studio Code
 ```
