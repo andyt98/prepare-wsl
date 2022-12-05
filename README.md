@@ -11,7 +11,7 @@ wsl --shutdown
 ```
 Install required packages
 ```
-sudo dnf update && sudo dnf upgrade -y && sudo dnf install -y vim git openssh-server rhel-system-roles 
+sudo dnf update && sudo dnf upgrade -y && sudo dnf install -y vim git openssh-server ansible-core
 ```
 - Generate ssh key pair and add the public key on your github account
 ```
