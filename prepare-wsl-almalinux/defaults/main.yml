@@ -4,6 +4,7 @@
 ansible_collections:
   - ansible.posix
   - community.general
+  - microsoft.sql
 
 packages:
   - pip
@@ -11,7 +12,6 @@ packages:
   - iproute
   - rhel-system-roles
   - ansible-collection-redhat-rhel_mgmt
-  - ansible-collection-microsoft-sql
 
 pip_packages:
   - ansible-lint
