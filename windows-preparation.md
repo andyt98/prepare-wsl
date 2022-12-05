@@ -1,5 +1,4 @@
 # Prepare WSL and remove bloatware from a fresh Windows 11 Install
-- Download "Windows Subsystem for Linux" and "AlmaLinux 9" from Microsoft Store
 - Enable "Windows Subsystem for Linux" and "Virtual Machine Platform" features -> Run as Administrator
 ```
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
@@ -9,9 +8,9 @@ Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
 ```
 Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 ```
+- Remove bloatware and install software
 ```
-- Downlaod Google Chrome and Visual Studio Code
-```
-winget install Google.Chrome --silent; winget install Microsoft.VisualStudioCode --silent; winget Git.Git --silent
+.\remove-bloatware.ps1
+.\install-software.ps1
 ```
 - Prepare WSL -> https://github.com/andyt98/prepare-wsl
