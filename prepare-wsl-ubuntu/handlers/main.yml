@@ -1,9 +1,0 @@
----
-- name: Reset ssh connection to allow user changes to affect ansible user
-  ansible.builtin.meta:
-    reset_connection
-  listen: reset connection
-
-- name: Install the Terraform autocomplete package
-  ansible.builtin.command: terraform -install-autocomplete
-  listen: terraform_autocomplete

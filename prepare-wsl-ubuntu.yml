@@ -1,8 +1,0 @@
----
-- hosts: localhost
-  gather_facts: true
-  name: Prepare Ubuntu WSL
-  tasks:
-  - name: Import role
-    ansible.builtin.import_role:
-      name: prepare-wsl

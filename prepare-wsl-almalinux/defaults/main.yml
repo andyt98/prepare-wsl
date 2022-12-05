@@ -5,6 +5,8 @@ ansible_collections:
   - ansible.posix
   - community.general
   - microsoft.sql
+  - ansible.windows
+  - community.windows
 
 packages:
   - pip

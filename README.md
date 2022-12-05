@@ -27,7 +27,7 @@ cd prepare-wsl
 ```
 - Install the required collection
 ```
-ansible-galaxy collection install community.general
+ansible-galaxy collection install community.general ansible.posix
 ```
 - Enable SSH
 ```
