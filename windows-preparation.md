@@ -1,5 +1,4 @@
-# Ansible playbook to remove bloatware from a fresh Windows 11 Install
-Prerequisites:
+# Prepare WSL and remove bloatware from a fresh Windows 11 Install
 - Download "Windows Subsystem for Linux" and "AlmaLinux 9" from Microsoft Store
 - Enable "Windows Subsystem for Linux" and "Virtual Machine Platform" features -> Run as Administrator
 ```
