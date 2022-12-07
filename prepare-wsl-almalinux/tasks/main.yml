@@ -15,3 +15,4 @@
 - name: Install required pip packages
   ansible.builtin.pip:
     name: "{{ pip_packages }}"
+    state: present

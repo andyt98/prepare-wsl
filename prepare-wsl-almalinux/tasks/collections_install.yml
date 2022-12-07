@@ -2,4 +2,5 @@
   community.general.ansible_galaxy_install:
     type: collection
     name: "{{ item }}"
+    force: true
   loop: "{{ ansible_collections }}"
