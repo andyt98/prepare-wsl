@@ -12,4 +12,4 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
 .\win-remove-bloatware.ps1
 .\win-install-software.ps1
 ```
-- Prepare WSL -> https://github.com/andyt98/prepare-wsl
+- Prepare WSL

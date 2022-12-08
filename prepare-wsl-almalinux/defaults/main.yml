@@ -5,6 +5,7 @@ ansible_collections:
   - ansible.posix
   - community.general
   - microsoft.sql
+  - fedora.linux_system_roles
   - ansible.windows
   - community.windows
 
