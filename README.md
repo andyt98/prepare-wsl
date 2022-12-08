@@ -20,7 +20,7 @@ cat .ssh/id_rsa.pub
 ```
 - Clone the repo
 ```
-git clone git@github.com:andyt98/prepare-wsl.git
+git clone https://github.com/andyt98/prepare-wsl.git
 git config --global user.email "you@example.com"
 git config --global user.name "you@example.com"
 cd prepare-wsl
