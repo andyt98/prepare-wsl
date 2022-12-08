@@ -1,3 +1,8 @@
+# Create Powershell profile if it doesn't exist
+if ((test-path $profile) -eq $false) { 
+    New-Item -Path $profile -Type File 
+}
+
 # Enable "Windows Subsystem for Linux" and "Virtual Machine Platform" features
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
 Enable-WindowsOptionalFeature -Online -FeatureName VirtualMachinePlatform
