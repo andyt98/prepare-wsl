@@ -11,6 +11,7 @@ ansible_collections:
 
 packages:
   - pip
+  - net-tools
   - iputils
   - iproute
   - rhel-system-roles
